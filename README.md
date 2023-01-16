@@ -26,6 +26,20 @@ $ minikube status
 
 Instalar [Kubectl](https://kubernetes.io/docs/tasks/tools/).
 
+## Ejecución sin contenedores en Local
+```bash
+# Instalamos cli de NestJs
+$ npm install -g @nestjs/cli
+# Instalamos MongoDB
+$ https://www.mongodb.com/docs/manual/administration/install-community/
+# Creamos archivo .env y agregamos los siguientes datos
+$ JWT_SECRET=123456
+$ JET_EXPIRED=60s
+$ URI_DB=mongodb://dbname:123456@localhost:27017/tokenizacion_culqi?authSource=admin
+# Corremos el proyecto modo desarrollo
+$ nest start --watch
+```
+
 ## Ejecución en Docker
 ```bash
 # Generar build de API
